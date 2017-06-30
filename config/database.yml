@@ -14,26 +14,22 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: fyen7920
-  host: localhost
+  # password: <%= ENV["DATABASE_PASSWORD"] %> #fyen7920
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['WATERAPP_HOST'] %>
   socket: /var/run/mysqld/mysqld.sock
   port: 3306
 
 development:
   <<: *default
-  # host: 172.104.79.212
-  password: 
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
   database: waterapp_development
 
 test:
   <<: *default
-  # host: 172.104.79.212
-  password:
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
   database: waterapp_test
 
 production:
   <<: *default
-  password: <%= ENV["DATABASE_PASSWORD"] %>
   database: waterapp_production

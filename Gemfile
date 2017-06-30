@@ -10,9 +10,10 @@ gem 'awesome_nested_set'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'#, '~> 5.0.2'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
-# Use Puma as the app server
+
+# gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem "mysql2"#, ">= 0.4.4"
+
 gem 'puma', '~> 3.0'
 
 gem 'devise'
