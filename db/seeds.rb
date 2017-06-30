@@ -10,4 +10,13 @@
 a = Category.create(name: "A")
 b = Category.create(name: "B")
 
-a.children.create(name: "a1")
+a1 = a.children.create(name: "a1")
+a.children.create(name: "a2")
+
+b.children.create(name: "b1")
+b.children.create(name: "b2")
+b.children.create(name: "b3")
+
+a1.children.create(name: "ａ11")
+
+
