@@ -7,6 +7,7 @@ end
 
 
 gem 'awesome_nested_set'
+gem 'awesome_print'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'#, '~> 5.0.2'
