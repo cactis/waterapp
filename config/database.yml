@@ -16,19 +16,20 @@ default: &default
   username: root
   # password: <%= ENV["DATABASE_PASSWORD"] %> #fyen7920
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: <%= ENV['WATERAPP_HOST'] %>
+  # host: <%= ENV['WATERAPP_HOST'] %>
   host: localhost
-  socket: /var/run/mysqld/mysqld.sock
+  # socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
   port: 3306
 
 development:
   <<: *default
-  # socket: /tmp/mysql.sock
+  socket: /tmp/mysql.sock
   database: waterapp_development
 
 test:
   <<: *default
-  # socket: /tmp/mysql.sock
+  socket: /tmp/mysql.sock
   database: waterapp_test
 
 production:
