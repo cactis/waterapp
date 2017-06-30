@@ -17,6 +17,7 @@ default: &default
   # password: <%= ENV["DATABASE_PASSWORD"] %> #fyen7920
   password: <%= ENV['DATABASE_PASSWORD'] %>
   host: <%= ENV['WATERAPP_HOST'] %>
+  host: localhost
   socket: /var/run/mysqld/mysqld.sock
   port: 3306
 
