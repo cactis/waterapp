@@ -35,3 +35,4 @@ test:
 production:
   <<: *default
   database: waterapp_production
+ 
