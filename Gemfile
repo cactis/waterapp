@@ -17,6 +17,8 @@ gem "mysql2"#, ">= 0.4.4"
 
 gem 'puma', '~> 3.0'
 
+gem 'rails_admin'
+
 gem 'devise'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
