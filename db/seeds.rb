@@ -11,7 +11,7 @@
 # a1 = a.children.create(name: "a1")
 # a.children.create(name: "a2")
 
-u2 = User.create!(email: "fyen@gmail.com", password: "waterapp")
+u2 = User.create!(email: "fyenvironmental@gmail.com", password: "waterapp")
 
 
 a = Category.create(name: "UFRO")
