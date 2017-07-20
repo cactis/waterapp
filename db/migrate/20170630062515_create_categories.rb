@@ -2,7 +2,8 @@ class CreateCategories < ActiveRecord::Migration[5.1]
   def change
     create_table :categories do |t|
       t.string :name
-      t.string :options # 正常|異常
+      t.string :options # 是|否
+      t.string :options1 # 正常|異常
       t.string :unit
 
       t.integer :parent_id, :null => true, :index => true
