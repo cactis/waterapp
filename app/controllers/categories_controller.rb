@@ -4,7 +4,13 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    if parent_id = params[:category_id]
+      parent = Category.find(parent_id)
+      @categories = parent.children 
+    else 
+      @categories = Category.all
+    end
+    render json: @categories
   end
 
   # GET /categories/1
@@ -71,4 +77,4 @@ class CategoriesController < ApplicationController
     def category_params
       params.fetch(:category, {})
     end
-end
+  end
