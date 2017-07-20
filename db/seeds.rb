@@ -14,7 +14,6 @@
 u1 = User.create!(email: "oxcart.us@gmail.com", password: "waterapp")
 u2 = User.create!(email: "den990037@gmail.com", password: "waterapp")
 u3 = User.create!(email: "7en1030003@gmail.com", password: "waterapp")
-u4 = User.create!(email: "123@yahoo.com.tw", password: "waterapp")
 
 a = Category.create(name: "UFRO")
 b = Category.create(name: "柴油引擎系統")
