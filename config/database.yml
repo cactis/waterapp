@@ -34,5 +34,6 @@ test:
 
 production:
   <<: *default
+  socket: /var/run/mysqld/mysqld.sock
   database: waterapp_production
- 
+

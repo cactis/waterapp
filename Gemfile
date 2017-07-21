@@ -17,7 +17,11 @@ gem "mysql2"#, ">= 0.4.4"
 
 gem 'puma', '~> 3.0'
 
-gem 'rails_admin'
+gem 'active_model_serializers'
+
+# gem 'rails_admin'
+gem 'rails_admin', '~> 1.0'
+gem 'config'
 
 gem 'devise'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -37,6 +41,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'railroad'
+  gem 'guard-shell'
 end
 
 group :development do
