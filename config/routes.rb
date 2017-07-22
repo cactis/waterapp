@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   scope :path => "/api" do
     resources :tasks do
+      # resources :categories do
+      #   resources :categories
+      # end
       resources :instections
     end
 
