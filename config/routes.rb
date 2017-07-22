@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-	
+
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   scope :path => "/api" do
-    resources :instections
+    resources :tasks do
+      resources :instections
+    end
+
     resources :categories do
       resources :categories
     end
