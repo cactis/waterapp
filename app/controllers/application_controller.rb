@@ -9,6 +9,14 @@ class ApplicationController < ActionController::API
   # before_action :check_authorization_token
 
   def set_current_user
+    if task_id =  params[:inspection] ? params[:inspection][:task_id] : params[:task]
+      log task_id, 'task_id'
+      if task = Task.find_by_id(task_id)
+        Task.current = task
+      end
+    end
+    log task, 'task'
+
     if user = User.find_by_token(authorization_token)
       log user, '111'
       User.current = user

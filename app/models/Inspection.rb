@@ -6,4 +6,16 @@ class Inspection < ApplicationRecord
   # delegate :user, to: :task
 
   validates :id, uniqueness: { scope: [:task_id, :category_id]}
+
+  before_commit do |record|
+    record.task.touch
+  end
+
+  def value=(val)
+    if index = category.options.present? && category.options.split('|').index(val)
+      self[:value] = index
+    else
+      self[:value] = val
+    end
+  end
 end

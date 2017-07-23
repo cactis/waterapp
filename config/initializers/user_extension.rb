@@ -19,3 +19,15 @@ module UserExtend
   # end
 
 end
+
+module TaskExtend
+
+  def current
+    Thread.current[:task]
+  end
+
+  def current=(task=nil)
+    Thread.current[:task] = task
+  end
+
+end

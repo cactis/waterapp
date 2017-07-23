@@ -1,13 +1,17 @@
 class CategorySerializer < BaseSerializer
   # include Rails.application.routes.url_helpers
   cache only: [:active]
-  attributes :id, :name, :level, :family, :options, :unit, :form_node
+  attributes :id, :name, :level, :family, :options, :unit, :form_node, :parent, :value, :raw_value
 
   # attribute :url#, if: :has_children?
   attribute :children_url, if: :has_children?
 
   def family
     object.self_and_ancestors.map{|obj| FamilySerializer.new obj}
+  end
+
+  def parent
+    object.parent ? FamilySerializer.new(object.parent) : nil
   end
 
   def has_children?

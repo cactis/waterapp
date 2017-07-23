@@ -8,8 +8,9 @@ Rails.application.routes.draw do
       # resources :categories do
       #   resources :categories
       # end
-      resources :instections
+      resources :inspections
     end
+    resources :inspections
 
     resources :categories do
       resources :categories
