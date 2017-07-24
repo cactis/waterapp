@@ -17,6 +17,8 @@ class ApplicationController < ActionController::API
     end
     log task, 'task'
 
+    return User.first
+
     if user = User.find_by_token(authorization_token)
       log user, '111'
       User.current = user

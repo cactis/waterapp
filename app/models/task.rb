@@ -2,7 +2,7 @@ class Task < ApplicationRecord
   extend TaskExtend
 
   belongs_to :user
-  has_many :inspections
+  has_many :inspections, dependent: :destroy
 
   default_scope { order("updated_at desc")}
 

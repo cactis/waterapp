@@ -1,5 +1,5 @@
 class BaseSerializer < ActiveModel::Serializer
-  cache
+  # cache
 
   include Rails.application.routes.url_helpers
 

@@ -7,7 +7,7 @@ class Inspection < ApplicationRecord
 
   validates :id, uniqueness: { scope: [:task_id, :category_id]}
 
-  before_commit do |record|
+  before_save do |record|
     record.task.touch
   end
 
