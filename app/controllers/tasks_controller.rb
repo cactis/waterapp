@@ -3,44 +3,45 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
-    @tasks = Task.all
+    resources = Task.all
 
-    render json: @tasks
+    render json: resources
   end
 
   # GET /tasks/1
   def show
-    render json: @task
+    render json: resource
   end
 
   # POST /tasks
   def create
-    @task = Task.new()
-    if @task.save
-      render json: @task, status: :created, location: @task
+    resource = Task.new()
+    if resource.save
+      render json: resource, status: :created, location: resource
     else
-      render json: @task.errors, status: :unprocessable_entity
+      render json: resource.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /tasks/1
   def update
-    if @task.update(task_params)
-      render json: @task
+    if resource.update(task_params)
+      render json: resource
     else
-      render json: @task.errors, status: :unprocessable_entity
+      render json: resource.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /tasks/1
   def destroy
-    @task.destroy
+    resource.destroy
+    # render json: resource
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = Task.find(params[:id])
+      resource = Task.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
