@@ -24,11 +24,11 @@ default: &default
 development:
   <<: *default
   # host: <%= ENV['WATERAPP_HOST'] %>
-  host: 172.104.79.212
-  password: fyen7920
+  # host: 172.104.79.212
+  # password: fyen7920
   socket: /tmp/mysql.sock
   database: waterapp_development
-  database: waterapp_production
+  # database: waterapp_production
 
 test:
   <<: *default
