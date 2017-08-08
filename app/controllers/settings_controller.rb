@@ -4,6 +4,7 @@ class SettingsController < ApplicationController
   # GET /settings
   def index
     resource = Setting.first
+    log resource, 'resurce'
     render json: resource
   end
 

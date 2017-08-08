@@ -10,12 +10,12 @@ class ApplicationController < ActionController::API
 
   def set_current_user
     if task_id =  params[:inspection] ? params[:inspection][:task_id] : params[:task]
-      log task_id, 'task_id'
+      # log task_id, 'task_id'
       if task = Task.find_by_id(task_id)
         Task.current = task
       end
     end
-    log task, 'task'
+    # log task, 'task'
 
     return User.first
 
