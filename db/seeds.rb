@@ -109,7 +109,7 @@ a9_2_1 = a9_2.children.create(name: "視RO系統電磁開關是否關閉", optio
 a9_3_1 = a9_3.children.create(name: "檢視各單元水管開關閥是否關閉", options: "是|否")
 a9_4_1 = a9_4.children.create(name: "檢視盤面電壓值是否顯示為0", options: "是|否")
 
-b1 = a.children.create(name: "柴油引擎")
+b1 = b.children.create(name: "柴油引擎")
 
 b1_1 = b1.children.create(name: "電瓶")
 b1_2 = b1.children.create(name: "啟動線路")
