@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   scope :path => "/api" do
+    resources :settings
     resources :tasks do
       # resources :categories do
       #   resources :categories

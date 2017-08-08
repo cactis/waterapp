@@ -4,7 +4,6 @@ class TasksController < ApplicationController
   # GET /tasks
   def index
     resources = Task.all
-
     render json: resources
   end
 
